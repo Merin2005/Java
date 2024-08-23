@@ -1,0 +1,27 @@
+package JavaTraining;
+class A
+{
+	void display()
+	{
+		System.out.println(5);
+	}
+}
+class B
+{
+	void display()
+	{
+		System.out.println(56);
+	}
+}
+
+public class example {
+
+	public static void main(String[] args) {
+    //object a is created
+		A a=new A();
+		a.display();
+		B b=new B();
+		b.display();
+	}
+
+}
