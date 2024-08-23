@@ -5,6 +5,10 @@ class A
 	{
 		System.out.println(5);
 	}
+	void display2()
+	{
+		System.out.println("hi");
+	}
 }
 class B
 {
@@ -13,15 +17,28 @@ class B
 		System.out.println(56);
 	}
 }
-
+class C
+{
+	void hi()
+		
+	{
+		System.out.println("WELCOME");
+	}
+}
 public class example {
 
 	public static void main(String[] args) {
-    //object a is created
+		//object a is created
 		A a=new A();
 		a.display();
+		a.display2();
 		B b=new B();
 		b.display();
-	}
+		C c=new C();
+		c.hi();}}
 
-}
+/* result
+   5
+   hi
+   56
+   WELCOME*/
