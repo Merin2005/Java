@@ -1,0 +1,42 @@
+import java.util.Scanner;
+class Mover
+{
+	
+	void area(double a,double b)
+	{
+		
+		System.out.println("Area of triangle = "+0.5*a*b);
+	}
+	void area(int a,int b)
+	{
+	    	
+		System.out.println("Area of rectangle = "+a*b);
+	}
+	void area(double a)
+	{
+	    	
+		System.out.println("Area of circle = "+3.14*a*a);
+	}
+}
+
+public class MethodOverloading 
+{
+	public static void main(String[] args)
+	{
+	 Scanner sc=new Scanner(System.in);
+	 Mover m=new Mover();
+	 System.out.println("Enter radius of circle : ");
+	 double r = sc.nextDouble();
+	 m.area(r);
+	 System.out.println("Enter length: ");
+	 int q = sc.nextInt();
+	 System.out.println("Enter breadth: ");
+	 int s = sc.nextInt();
+	 m.area(q,s);
+     System.out.println("Enter base and height : ");
+     double t = sc.nextDouble();
+     double p = sc.nextDouble();
+	 m.area(t,p);
+	}
+
+}
