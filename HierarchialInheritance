@@ -102,3 +102,44 @@ public class HierarchialInheritance
 	  m.printDepartment();
 	}
 }
+//Reslt
+ENTER THE DETAILS OF THE OFFICER
+Enter Name:
+Alice
+Enter Age:
+27
+Enter Phone number
+9495860610
+Enter Address:
+Idukki
+Enter Salary:
+50000
+Enter Specialization:
+Finance
+ENTER THE DETAILS OF THE MANAGER
+Enter Name:
+Bob
+Enter Age:
+30
+Enter Phone number
+8606109495
+Enter Address:
+Kottayam
+Enter Salary:
+100000
+Enter Department:
+HR
+DETAILS OF THE OFFICER
+Name:Alice
+Age:27
+Phone number:9495860610
+Adress:Idukki
+Salary:50000.0
+Specialization=Finance
+DETAILS OF THE MANAGER
+Name:Bob
+Age:30
+Phone number:8606109495
+Adress:Kottayam
+Salary:100000.0
+Department=HR
