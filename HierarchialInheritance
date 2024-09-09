@@ -82,7 +82,7 @@ public class HierarchialInheritance
 	  name=sc.next();
 	  System.out.println("Enter Age:");
 	  age=sc.nextInt();
-	  System.out.println("Enter Phone number");
+	  System.out.println("Enter Phone number:");
 	  phonenumber=sc.nextLong();
 	  System.out.println("Enter Address:");
 	  address=sc.next();
