@@ -8,7 +8,7 @@ interface Human
 }
 interface Recruitment 
 {
-    void screening(int score);
+        void screening(int score);
 }
 class Programmer implements Human, Recruitment
 {
