@@ -14,7 +14,7 @@ public class FileHandling
     			 fout.write(i);
     			 
     		 }
-    		 System.out.println("Successfully write to the file");
+    		 System.out.println("Successfully wrote to the file");
     		 fin.close();
     		 fout.close();
     	 }
