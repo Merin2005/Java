@@ -1,0 +1,70 @@
+package JavaTraining;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+class EvenWriterThread extends Thread {
+    /*private String filename;
+
+    public EvenWriterThread(String filename) {
+        this.filename = filename;
+    }*/
+
+    @Override
+    public void run() {
+        try (FileWriter writer = new FileWriter("even_numbers.txt")) {
+            for (int i = 2; i <= 100; i += 2) {
+                writer.write(i + "\n");
+            }
+            System.out.println("Even numbers written to even_numbers.txt ");
+        } catch (IOException e) {
+            System.out.println("An error occurred while writing even numbers: " + e.getMessage());
+        }
+    }
+}
+
+class OddWriterThread extends Thread {
+  /*  private String filename;
+
+    public OddWriterThread(String filename) {
+        this.filename = filename;
+    }
+*/
+    @Override
+    public void run() {
+        try (FileWriter writer = new FileWriter("odd_numbers.txt")) {
+            for (int i = 1; i <= 100; i += 2) {
+                writer.write(i + "\n");
+            }
+            System.out.println("Odd numbers written to odd_numbers.txt " );
+        } catch (IOException e) {
+            System.out.println("An error occurred while writing odd numbers: " + e.getMessage());
+        }
+    }
+}
+
+public class OddEvenFileWriter {
+    public static void main(String[] args) {
+        // Define filenames for even and odd numbers
+       /* String evenFilename = "even_numbers.txt";
+        String oddFilename = "odd_numbers.txt";
+*/
+        // Create threads for writing even and odd numbers
+        EvenWriterThread evenThread = new EvenWriterThread();
+        OddWriterThread oddThread = new OddWriterThread();
+
+        // Start both threads
+        evenThread.start();
+        oddThread.start();
+
+        // Wait for both threads to complete
+        try {
+            evenThread.join();
+            oddThread.join();
+        } catch (InterruptedException e) {
+            System.out.println("Thread interrupted: " + e.getMessage());
+        }
+
+        System.out.println("Both threads have finished writing to files.");
+    }
+}
