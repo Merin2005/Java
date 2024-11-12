@@ -1,0 +1,55 @@
+package javalab;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class Sample {
+    public static void main(String[] args) {
+        // Create a new JFrame with a title
+        JFrame f = new JFrame("Calculator");
+        f.setSize(500, 400);
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.setLayout(null);
+
+        // Label for instruction
+        JLabel l = new JLabel("Enter the string:");
+        l.setBounds(100, 100, 150, 25);
+        f.add(l);
+
+        // Text field to input the string
+        JTextField t = new JTextField(20);
+        t.setBounds(250, 100, 150, 25);
+        f.add(t);
+
+        // Label to display the reversed string
+        JLabel l2 = new JLabel("");
+        l2.setBounds(150, 200, 300, 25);
+        f.add(l2);
+
+        // Button to trigger the reversal
+        JButton b = new JButton("Reverse");
+        b.setBounds(200, 150, 100, 25);
+        f.add(b);
+
+        // Action listener for the button
+        b.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                // Get text from the text field
+                String s = t.getText();
+                
+                // Reverse the string without using inbuilt functions
+                String s1 = "";
+                for (int i = s.length() - 1; i >= 0; i--) {
+                    s1 += s.charAt(i);
+                }
+                
+                // Set the reversed string in the label
+                l2.setText("Reversed string: " + s1);
+            }
+        });
+
+        // Make the frame visible
+        f.setVisible(true);
+    }
+}
