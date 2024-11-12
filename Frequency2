@@ -1,0 +1,25 @@
+package javalab;
+import java.util.Scanner;
+public class Frequency {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String s;
+		int i;
+		int[] a = new int[256];
+		
+		sc= new Scanner(System.in);
+
+		System.out.print("\nPlease Enter String =  ");
+		s = sc.nextLine();
+		for(i=0;i<s.length();i++)
+		{
+			a[s.charAt(i)]++;
+		}
+		for(i = 0; i < a.length; i++) {
+			if(a[i] != 0) {
+				System.out.println((char) i + "-" + a[i]);
+			}
+		}
+	}
+}
